@@ -1,0 +1,30 @@
+# HomeAV Privacy Policy
+
+_Last updated: [DATE]_
+
+HomeAV is a client app for media servers that you run yourself. This policy explains what the app does with data.
+
+## Data we collect
+**None.** HomeAV has no developer-operated servers, accounts, analytics, advertising or tracking. We do not receive your data.
+
+## Data stored on your device
+- **Sign-in token**: stored in the system Keychain, removed when you sign out.
+- **Preferences, favourites, watch progress and cached artwork**: stored locally on your device.
+- **Server address and username**: stored locally so you don't have to re-enter them.
+
+## Where the app connects
+- **Your own server**, at the address you enter. Your credentials and requests go only to that server. Its operator, which may be you, controls what it logs and keeps.
+- **TMDB image service** (`image.tmdb.org`), to show posters for requests. Like any image host, it can see your device's IP address.
+- **Your local network**, if you open Network & Diagnostics, to list devices advertising on it. Nothing from this is sent anywhere.
+
+## Sharing
+We do not sell, share or transfer your data to third parties.
+
+## Children
+HomeAV does not collect personal information from anyone, including children.
+
+## Changes
+Updates to this policy will be posted on this page with a new date.
+
+## Contact
+[YOUR NAME OR COMPANY] · [CONTACT EMAIL]
