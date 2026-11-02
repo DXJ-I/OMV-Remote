@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Support — OMV Remote</title>
+<meta name="description" content="Help with OMV Remote: connecting to openmediavault, certificates, two-factor sign-in, disk health, Docker, widgets and Wake NAS.">
+<meta name="theme-color" content="#e4f1ed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1617" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/apple-touch-icon.png" alt="" width="32" height="32">OMV Remote</a>
+    <nav class="site-nav" aria-label="Site">
+      <a class="hide-sm" href="./">Home</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy<span class="long"> Policy</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap narrow">
+    <h1>Support</h1>
+    <p class="meta">Answers to common questions, and how to reach us.</p>
+
+    <div class="contact-card">
+      <p><strong>Need a hand?</strong>Email us and include your iOS version, your openmediavault version and what you were doing. Never send passwords.</p>
+      <!--cfg:email-button-->
+<span class="button primary todo">Contact email</span>
+<!--/cfg-->
+    </div>
+
+    <nav class="toc" aria-label="Contents">
+      <strong>Topics</strong>
+      <ol>
+        <li><a href="#start">Getting started</a></li>
+        <li><a href="#connect">Can't connect</a></li>
+        <li><a href="#certificates">Certificate prompts</a></li>
+        <li><a href="#twofactor">Two-factor sign-in</a></li>
+        <li><a href="#admin">“Admin only” and missing figures</a></li>
+        <li><a href="#smart">Disk health (S.M.A.R.T.)</a></li>
+        <li><a href="#docker">Docker</a></li>
+        <li><a href="#alerts">Alerts and notifications</a></li>
+        <li><a href="#widgets">Widgets</a></li>
+        <li><a href="#wake">Wake NAS</a></li>
+        <li><a href="#lock">Face ID and app lock</a></li>
+        <li><a href="#data">Removing your data</a></li>
+        <li><a href="#report">Reporting a problem</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="start">Getting started</h2>
+    <p>You need an iPhone or iPad with iOS 17 or later, and an openmediavault 7 or 8 server you can reach from it.</p>
+    <ol class="steps">
+      <li>Open OMV Remote and tap <strong>Add Server</strong>.</li>
+      <li>Enter the address you use for the openmediavault web interface (for example <code>https://nas.local</code> or <code>192.168.1.20</code>), your username and password.</li>
+      <li>Tap <strong>Test connection</strong>, then save. Allow local network access when iOS asks.</li>
+    </ol>
+    <p>Want to look around first? Tap <strong>Try Demo NAS</strong> on the dashboard. Leave it under <span class="path">More › Exit demo</span>.</p>
+
+    <h2 id="connect">Can't connect</h2>
+    <ul>
+      <li>Make sure your device is on the same Wi-Fi as the server, or connected to your VPN.</li>
+      <li>Allow local network access: <span class="path">Settings › Privacy &amp; Security › Local Network › OMV Remote</span>.</li>
+      <li>Check the address, the port and whether the server uses HTTPS or HTTP — open the same address in Safari to compare.</li>
+      <li>If the password is right but sign-in fails, check the account isn't disabled in openmediavault.</li>
+    </ul>
+
+    <h2 id="certificates">Certificate prompts</h2>
+    <p>If your server uses a self-signed certificate, the app shows its SHA-256 fingerprint the first time you connect. Compare it with the fingerprint shown on the server before tapping Trust. If the app later says the certificate changed and you didn't renew it, don't accept the change — something may be intercepting the connection.</p>
+
+    <h2 id="twofactor">Two-factor sign-in</h2>
+    <p>If your openmediavault account uses an authenticator app, OMV Remote asks for the six-digit code after your password. Codes change every 30 seconds, so enter the current one.</p>
+
+    <h2 id="admin">“Admin only” and missing figures</h2>
+    <p>openmediavault gives CPU, memory, uptime, load, network traffic and disk-health information only to administrator accounts. With a read-only account these show <strong>Admin only</strong>. Monitoring still works for everything else; sign in as an administrator to see the rest and to make changes.</p>
+    <ul>
+      <li><strong>Network shows “Measuring…”</strong> — throughput is calculated from two readings, so it appears after the next refresh.</li>
+      <li><strong>CPU temperature is unavailable</strong> — it needs the openmediavault CPU Temperature plugin with a working sensor.</li>
+      <li><strong>A volume shows “—”</strong> — openmediavault couldn't read that filesystem's usage, for example a disconnected USB drive.</li>
+    </ul>
+
+    <h2 id="smart">Disk health (S.M.A.R.T.)</h2>
+    <p>Storage shows openmediavault's own verdict for each disk. Tap <strong>SMART details</strong> for temperature, power-on hours and the attribute table. NVMe and SAS drives don't report an attribute table. Self-tests run as scheduled jobs in the openmediavault web interface (<span class="path">Storage › S.M.A.R.T. › Scheduled tasks</span>).</p>
+
+    <h2 id="docker">Docker</h2>
+    <p>Docker features need the openmediavault Compose plugin (openmediavault-compose, from omv-extras). Starting, stopping or restarting a container always asks for confirmation and Face ID.</p>
+
+    <h2 id="alerts">Alerts and notifications</h2>
+    <p>Turn on <span class="path">Settings › Alert notifications</span> to be told when storage runs low, a disk reports problems or gets hot, or a server can't be reached. Thresholds and quiet hours can be set for each server. If you previously declined notifications, allow them in <span class="path">Settings › Notifications › OMV Remote</span>.</p>
+    <p>iOS decides when apps refresh in the background, so alerts can be delayed while the app is closed. For round-the-clock alerts, run the optional Companion on your server — see the project's README.</p>
+
+    <h2 id="widgets">Widgets</h2>
+    <p>Touch and hold the Home Screen, tap <strong>Edit › Add Widget</strong> and choose OMV Remote. Widgets show the readings from the app's last refresh and dim when they're old; open the app or tap the refresh button to update them. To keep server details off your Home Screen, turn off <span class="path">Settings › Show server status in widgets</span>.</p>
+
+    <h2 id="wake">Wake NAS</h2>
+    <p>Enter the server's MAC address under <span class="path">More › Wake NAS</span>. Wake-on-LAN must be enabled in the server's firmware (BIOS/UEFI) and network settings. The packet stays on your local network, so it won't usually cross routers, VLANs or VPNs.</p>
+
+    <h2 id="lock">Face ID and app lock</h2>
+    <p>The app unlocks with Face ID, Touch ID or your device passcode, which also protect your saved passwords. Without a device passcode, iOS can't store protected passwords, so set one to add servers. Change how quickly the app locks under <span class="path">Settings › Lock after inactivity</span>.</p>
+
+    <h2 id="data">Removing your data</h2>
+    <p>Remove a server in the app to delete everything stored for it, including its password and history. Deleting the app removes all its data. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+
+    <h2 id="report">Reporting a problem</h2>
+    <p>Email us with the steps that lead to the problem. A diagnostic summary helps: open <span class="path">More › Diagnostics &amp; Crash Logs</span>, tap <strong>Prepare summary JSON</strong>, then <strong>Share diagnostics summary</strong>. It contains app and device diagnostics, never passwords or server credentials — check it before sending. Please report security issues privately by email rather than in public.</p>
+
+    <div class="contact-card">
+      <p><strong>Still stuck?</strong>We read every message.</p>
+      <!--cfg:email-button-->
+<span class="button primary todo">Contact email</span>
+<!--/cfg-->
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a></nav>
+    <p><!--cfg:copyright-->© 2026 <span class="todo">Developer name</span><!--/cfg-->. OMV Remote is an independent app and is not affiliated with, endorsed by or sponsored by the openmediavault project.</p>
+  </div>
+</footer>
+</body>
+</html>

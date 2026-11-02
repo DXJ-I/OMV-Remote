@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>OMV Remote — your openmediavault server on iPhone and iPad</title>
+<meta name="description" content="Check storage, S.M.A.R.T. disk health, Docker containers and logs on your own openmediavault NAS from iPhone and iPad. No accounts, no tracking.">
+<meta name="theme-color" content="#e4f1ed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1617" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="OMV Remote">
+<meta property="og:description" content="Your openmediavault server, on iPhone and iPad. Dashboard, storage, S.M.A.R.T., Docker and logs — with no accounts and no tracking.">
+<meta name="twitter:card" content="summary_large_image">
+<!--cfg:head-->
+<meta property="og:image" content="assets/og-image.png">
+<!--/cfg-->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/apple-touch-icon.png" alt="" width="32" height="32">OMV Remote</a>
+    <nav class="site-nav" aria-label="Site">
+      <a class="hide-sm" href="#features">Features</a>
+      <a class="hide-sm" href="#privacy">Your data</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy<span class="long"> Policy</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">For openmediavault 7 and 8</span>
+        <h1>Your home server, <span>in your pocket.</span></h1>
+        <p class="lede">OMV Remote shows how your openmediavault NAS is doing at a glance — storage, disk health, containers and logs — and handles everyday tasks without opening a browser.</p>
+        <div class="cta">
+          <!--cfg:appstore-->
+          <span class="button primary" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.7c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76a4.25 4.25 0 0 0-3.6 2.18c-1.54 2.66-.39 6.6 1.1 8.76.74 1.06 1.61 2.24 2.75 2.2 1.1-.04 1.52-.71 2.86-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.07 2.66-2.14.84-1.23 1.19-2.42 1.2-2.48-.02-.01-2.3-.88-2.33-3.5zM14.2 6.23c.6-.74 1.01-1.75.9-2.77-.87.04-1.94.59-2.56 1.32-.56.64-1.05 1.68-.92 2.67.98.08 1.97-.5 2.58-1.22z"/></svg>Coming soon to the App Store</span>
+          <!--/cfg-->
+          <a class="button secondary" href="#features">See what it does</a>
+        </div>
+        <p class="fine">Free of accounts and tracking. Try the built-in demo NAS — no server needed.</p>
+      </div>
+
+      <div class="device-stage" aria-hidden="true">
+        <div class="phone">
+          <div class="screen">
+            <div class="statusbar"><span>9:41</span><span class="island"></span><span>100%</span></div>
+            <div class="screen-body">
+              <div class="app-title">Dashboard <i></i></div>
+              <div class="card hero-card">
+                <div><strong>omv-demo</strong><small>openmediavault 8.0.0-1</small></div>
+                <span class="pill">Online</span>
+              </div>
+              <div class="tiles">
+                <div class="tile"><div class="label">CPU</div><div class="value">18.0%</div><div class="bar"><b class="w18"></b></div></div>
+                <div class="tile"><div class="label">Memory</div><div class="value">3.24 / 7.72 GiB</div><div class="bar"><b class="w42"></b></div></div>
+                <div class="tile"><div class="label">Temperature</div><div class="value">46.0 °C</div><div class="bar"><b class="w46 warm"></b></div></div>
+                <div class="tile"><div class="label">Storage</div><div class="value">3.91 / 10.91 TiB</div><div class="bar"><b class="w36"></b></div></div>
+              </div>
+              <div class="card rows">
+                <div><span>Uptime</span><b>12 days, 4 hours</b></div>
+                <div><span>Load</span><b>0.12, 0.18, 0.15</b></div>
+                <div><span>Network</span><b>↓ 2.40 MiB/s ↑ 819 KiB/s</b></div>
+              </div>
+              <div class="card">
+                <div class="rows"><div><b>CPU trend</b><span>Last 12 readings</span></div></div>
+                <svg class="trend" viewBox="0 0 300 46" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1a8287" stop-opacity=".28"/><stop offset="1" stop-color="#1a8287" stop-opacity="0"/></linearGradient></defs><path d="M0 30 C25 22 40 18 60 24 S100 38 125 28 165 10 190 16 235 34 260 26 290 18 300 20 V46 H0Z" fill="url(#g)"/><path d="M0 30 C25 22 40 18 60 24 S100 38 125 28 165 10 190 16 235 34 260 26 290 18 300 20" fill="none" stroke="#1a8287" stroke-width="2.4" stroke-linecap="round"/></svg>
+              </div>
+              <div class="card rows">
+                <div><b>Volumes</b><span>2 mounted</span></div>
+                <div><span>data</span><b>39% · 4.46 TiB free</b></div>
+                <div class="bar"><b class="w39"></b></div>
+                <div><span>backup</span><b>30% · 2.55 TiB free</b></div>
+                <div class="bar"><b class="w30"></b></div>
+              </div>
+            </div>
+            <div class="tabbar"><span class="on">Dashboard</span><span>Storage</span><span>Docker</span><span>Logs</span><span>More</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Everything you check in the web interface, ready in a tap.</h2>
+        <p>Built for people who run a NAS at home or in a lab and want to know it's healthy without sitting at a computer.</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/></svg></div>
+          <h3>Dashboard</h3>
+          <p>CPU, memory, storage, CPU temperature, uptime, load and network throughput, with a health score and active alerts. Figures match what openmediavault itself reports.</p>
+        </article>
+        <article class="feature">
+          <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3z"/><path d="M4 7v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+          <h3>Storage and disk health</h3>
+          <p>Every mounted volume and disk, with openmediavault's S.M.A.R.T. verdict for each drive, temperatures, power-on hours and the full attribute table.</p>
+        </article>
+        <article class="feature">
+          <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13h18l-1.5 4.5A3 3 0 0 1 16.7 20H7.3a3 3 0 0 1-2.8-2.5z"/><rect x="5" y="9" width="3" height="3"/><rect x="9" y="9" width="3" height="3"/><rect x="13" y="9" width="3" height="3"/><rect x="9" y="5" width="3" height="3"/></svg></div>
+          <h3>Docker and Compose</h3>
+          <p>Containers with status, CPU and memory, live logs, start, stop and restart, Compose stacks and guided deployment. Needs the openmediavault Compose plugin.</p>
+        </article>
+        <article class="feature">
+          <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10a2 2 0 0 1 2 2v14l-3-2-3 2-3-2-3 2V6a2 2 0 0 1 2-2z"/><path d="M9 9h6M9 13h4"/></svg></div>
+          <h3>Logs</h3>
+          <p>System, authentication and service logs in plain language, with search and level filters, so the line that matters is easy to find.</p>
+        </article>
+        <article class="feature">
+          <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+          <h3>History and forecasts</h3>
+          <p>Up to 30 days of trends, stored only on your device, and an estimate of when storage will fill once there's enough data to be sure.</p>
+        </article>
+        <article class="feature">
+          <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v4"/><path d="M9 9.5a4 4 0 1 0 6 0"/></svg></div>
+          <h3>Widgets and Wake NAS</h3>
+          <p>Home Screen and Lock Screen widgets for one server or all of them, and a Wake NAS button and Siri shortcut that start a sleeping server over your network.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap split">
+      <div>
+        <div class="section-head">
+          <h2>At home on iPhone and iPad.</h2>
+          <p>On iPad the dashboard spreads across two columns with a sidebar, and works in Split View, Slide Over and Stage Manager. Keyboard shortcuts cover refresh, servers, settings and tabs.</p>
+        </div>
+        <ul class="checklist">
+          <li><div><strong>Several servers</strong><span>Switch between your NAS boxes, or see them all in one widget.</span></div></li>
+          <li><div><strong>Careful with changes</strong><span>Restarting a container or the server always asks first and confirms with Face ID.</span></div></li>
+          <li><div><strong>On-device alerts</strong><span>Optional notifications when storage runs low, a disk reports problems or the server can't be reached.</span></div></li>
+        </ul>
+      </div>
+      <div class="ipad" aria-hidden="true">
+        <div class="ipad-screen">
+          <div class="side"><span class="on">Dashboard</span><span>Storage</span><span>Docker</span><span>Logs</span><span>More</span></div>
+          <div class="col"><div class="blk"></div><div class="blk tall"></div><div class="blk"></div></div>
+          <div class="col"><div class="blk tall"></div><div class="blk"></div><div class="blk"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="privacy">
+    <div class="wrap split">
+      <div class="promise">
+        <div class="big">Data Not Collected</div>
+        <p>That's the App Store privacy label, and it's literal. There are no accounts, analytics, advertising or tracking, and the developer never sees your servers or your data.</p>
+        <a href="privacy.html">Read the privacy policy</a>
+      </div>
+      <ul class="checklist">
+        <li><div><strong>Talks only to your server</strong><span>The app connects to the openmediavault servers you add, and nothing else.</span></div></li>
+        <li><div><strong>Passwords stay in the Keychain</strong><span>Stored on this device only, never synced, and protected by Face ID, Touch ID or your passcode.</span></div></li>
+        <li><div><strong>Secure connections</strong><span>HTTPS with certificate pinning for self-signed certificates, and support for two-factor sign-in.</span></div></li>
+        <li><div><strong>This website too</strong><span>No cookies, scripts, web fonts or trackers on these pages.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap narrow">
+      <div class="section-head">
+        <h2>Questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>What do I need?</summary>
+          <p>An iPhone or iPad with iOS 17 or later, and an openmediavault 7 or 8 server you can reach from it — on the same network, or over a VPN. Docker features need the openmediavault Compose plugin; the CPU temperature reading needs the CPU Temperature plugin.</p>
+        </details>
+        <details>
+          <summary>Can I try it without a server?</summary>
+          <p>Yes. Tap <strong>Try Demo NAS</strong> on the dashboard to explore every screen with sample data. Nothing is sent over the network.</p>
+        </details>
+        <details>
+          <summary>Which account should I sign in with?</summary>
+          <p>An openmediavault administrator account shows everything. A read-only account can connect, but openmediavault only gives CPU, memory, disk health and network figures to administrators, and changes always need an administrator.</p>
+        </details>
+        <details>
+          <summary>Does it work away from home?</summary>
+          <p>It works anywhere your device can reach the server, such as through a VPN like WireGuard or Tailscale. Exposing the openmediavault web interface directly to the internet isn't recommended.</p>
+        </details>
+        <details>
+          <summary>Is this an official openmediavault app?</summary>
+          <p>No. OMV Remote is an independent app, made by a user for users. It isn't affiliated with, endorsed or sponsored by the openmediavault project.</p>
+        </details>
+      </div>
+      <p class="fine more">More answers on the <a href="support.html">support page</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a></nav>
+    <p><!--cfg:copyright-->© 2026 <span class="todo">Developer name</span><!--/cfg-->. openmediavault is a trademark of its respective owner. OMV Remote is an independent app and is not affiliated with, endorsed by or sponsored by the openmediavault project. Apple, iPhone and iPad are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+</body>
+</html>

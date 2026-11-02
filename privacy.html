@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Privacy Policy — OMV Remote</title>
+<meta name="description" content="OMV Remote collects no data. It has no accounts, analytics, advertising or tracking, and talks only to the openmediavault servers you add.">
+<meta name="theme-color" content="#e4f1ed" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1617" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/apple-touch-icon.png" alt="" width="32" height="32">OMV Remote</a>
+    <nav class="site-nav" aria-label="Site">
+      <a class="hide-sm" href="./">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html" aria-current="page">Privacy<span class="long"> Policy</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap narrow">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective <!--cfg:effective--><span class="todo">date of first release</span><!--/cfg--> · Applies to the OMV Remote app for iPhone and iPad, its widgets and this website.</p>
+
+    <div class="summary-card">
+      <p><strong>The short version:</strong> OMV Remote does not collect any data. There are no accounts, analytics, advertising, tracking or third-party code, and the developer receives nothing from the app. It connects only to the openmediavault servers you add, and everything it stores stays on your device.</p>
+    </div>
+
+    <nav class="toc" aria-label="Contents">
+      <strong>Contents</strong>
+      <ol>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#collect">What we collect</a></li>
+        <li><a href="#device">What stays on your device</a></li>
+        <li><a href="#network">Network connections</a></li>
+        <li><a href="#widgets">Widgets</a></li>
+        <li><a href="#permissions">Permissions</a></li>
+        <li><a href="#companion">The optional Companion</a></li>
+        <li><a href="#support-email">If you contact us</a></li>
+        <li><a href="#website">This website</a></li>
+        <li><a href="#rights">Your choices and rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#changes">Changes and contact</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="who">1. Who we are</h2>
+    <p>OMV Remote is developed by <!--cfg:developer--><span class="todo">Developer name</span><!--/cfg--> (“we”, “us”). It is an independent app for managing your own openmediavault server and is not affiliated with, endorsed by or sponsored by the openmediavault project.</p>
+
+    <h2 id="collect">2. What we collect</h2>
+    <p>Nothing. The app has no sign-up, contains no analytics, advertising or crash-reporting SDKs, and never sends information about you, your device or your servers to us or to anyone else. Its App Store privacy label is <strong>Data Not Collected</strong>.</p>
+    <p>If you turn on <span class="path">Share With App Developers</span> in your device's Analytics settings, Apple may give us anonymous crash and performance reports. That is controlled by you and handled under Apple's privacy policy; the app itself sends nothing.</p>
+
+    <h2 id="device">3. What stays on your device</h2>
+    <p>To work, the app keeps the following on your iPhone or iPad. None of it is sent to us.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Information</th><th>Where it is kept</th><th>How long</th></tr></thead>
+        <tbody>
+          <tr><td>Server profiles: name, address, port and username</td><td>App storage</td><td>Until you remove the server</td></tr>
+          <tr><td>Server passwords</td><td>iOS Keychain, this device only, never synced to iCloud, unlocked with Face ID, Touch ID or your passcode</td><td>Until you remove the server</td></tr>
+          <tr><td>Certificate fingerprints you confirm for self-signed certificates</td><td>iOS Keychain, this device only</td><td>Until you remove the server</td></tr>
+          <tr><td>Metric history: CPU, memory, storage, temperature and network readings</td><td>App storage, file-protected</td><td>Up to 30 days, or until you remove the server</td></tr>
+          <tr><td>Alerts, incident history, alert rules and app settings</td><td>App storage</td><td>Until you remove the server or delete the app</td></tr>
+          <tr><td>Local AI reports (optional)</td><td>App storage; produced by Apple's on-device model, without server addresses, usernames or passwords</td><td>Until you remove the server</td></tr>
+          <tr><td>Diagnostic reports from Apple's MetricKit</td><td>App storage, a limited number kept</td><td>Leaves the device only if you export it yourself</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Sign-in sessions with your server are kept in memory only and are cleared when the app locks.</p>
+
+    <h2 id="network">4. Network connections</h2>
+    <ul>
+      <li>The app connects only to the servers you add, at the address you enter. It does not contact our servers, because there are none.</li>
+      <li>HTTPS is recommended. Plain HTTP is available for local networks; the app warns you that it is unencrypted.</li>
+      <li><strong>Wake NAS</strong> sends a standard Wake-on-LAN packet on your local network.</li>
+      <li>Notifications are created on your device. No push-notification service is used.</li>
+    </ul>
+
+    <h2 id="widgets">5. Widgets</h2>
+    <p>If widgets are on, the app shares server names, status, readings, update and alert counts, and the Wake-on-LAN target with its own widgets, through storage that only OMV Remote can read on this device. Addresses, usernames, passwords and session data are never shared with widgets. Server names are hidden when your device hides sensitive Lock Screen content. Turning off <span class="path">Show server status in widgets</span> in Settings empties the shared data.</p>
+
+    <h2 id="permissions">6. Permissions</h2>
+    <ul>
+      <li><strong>Local Network:</strong> to reach the server you add on your network, and to send the Wake-on-LAN packet.</li>
+      <li><strong>Face ID or Touch ID:</strong> to unlock the app and your saved passwords, and to confirm changes on your server. Biometric data is handled by iOS and never available to the app.</li>
+      <li><strong>Notifications</strong> (optional, off until you turn on Alert notifications): local alerts about your own server.</li>
+    </ul>
+
+    <h2 id="companion">7. The optional Companion</h2>
+    <p>The Companion is a separate monitor you can run on your own server. If you set it up, it sends alert messages — for example a disk name, its usage or temperature — from your server to the notification service you choose (ntfy, Pushover or your own webhook). That data goes directly from your server to your chosen service, under that service's terms. It never passes through us.</p>
+
+    <h2 id="support-email">8. If you contact us</h2>
+    <p>If you email us for support, we receive your email address and whatever you include in your message. We use it only to reply to you, keep it no longer than needed to resolve your request, and never share or sell it. Please never send passwords.</p>
+
+    <h2 id="website">9. This website</h2>
+    <p>These pages use no cookies, scripts, web fonts, analytics or embedded content. They are hosted on GitHub Pages; GitHub may log technical information such as your IP address to operate and secure the service, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+
+    <h2 id="rights">10. Your choices and rights</h2>
+    <ul>
+      <li>Remove a server in the app to delete its profile, password, certificate fingerprint, history, alerts and reports.</li>
+      <li>Turn off widgets in Settings to empty the shared widget data.</li>
+      <li>Delete the app to remove everything it stored.</li>
+    </ul>
+    <p>Because we hold no data from the app, there is nothing for us to access, correct or delete on your behalf. For support emails, you can ask us to delete your messages at any time. Depending on where you live, data-protection law (for example the UK GDPR or EU GDPR) gives you further rights, including complaining to your data-protection authority.</p>
+
+    <h2 id="children">11. Children</h2>
+    <p>OMV Remote is a tool for managing your own server and is not directed at children. It collects no data from anyone.</p>
+
+    <h2 id="changes">12. Changes and contact</h2>
+    <p>If this policy changes, the new version will be published on this page with a new effective date. Material changes will also be noted in the app's release notes.</p>
+    <div class="contact-card">
+      <p><strong>Questions about privacy?</strong>We're happy to help.</p>
+      <!--cfg:email-button-->
+<span class="button primary todo">Contact email</span>
+<!--/cfg-->
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a></nav>
+    <p><!--cfg:copyright-->© 2026 <span class="todo">Developer name</span><!--/cfg-->. OMV Remote is an independent app and is not affiliated with, endorsed by or sponsored by the openmediavault project.</p>
+  </div>
+</footer>
+</body>
+</html>
